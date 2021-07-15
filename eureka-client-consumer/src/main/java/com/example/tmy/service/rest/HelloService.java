@@ -1,4 +1,4 @@
-package com.example.tmy.service;
+package com.example.tmy.service.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

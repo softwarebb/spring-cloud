@@ -1,6 +1,7 @@
 package com.example.tmy.controller;
 
-import com.example.tmy.service.HelloService;
+import com.example.tmy.service.feign.HelloFeignService;
+import com.example.tmy.service.rest.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,8 +19,18 @@ public class RobbinController {
     @Autowired
     private HelloService helloService;
 
-    @GetMapping("/hi")
-    public String hi(@RequestParam(defaultValue = "eureka") String name) {
-        return helloService.hiService(name);
+    @Autowired
+    private HelloFeignService helloFeignService;
+
+    @GetMapping("rest/hi")
+    public String restHi(@RequestParam(defaultValue = "eureka") String name) {
+        return helloService.hiService("rest/hi/" + name);
     }
+
+
+    @GetMapping("feign/hi")
+    public String feignHi(@RequestParam(defaultValue = "eureka") String name) {
+        return helloFeignService.hiService("feign/hi/" + name);
+    }
+
 }
