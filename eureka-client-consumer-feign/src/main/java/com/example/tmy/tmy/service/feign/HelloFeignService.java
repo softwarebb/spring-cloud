@@ -1,5 +1,6 @@
-package com.example.tmy.service.feign;
+package com.example.tmy.tmy.service.feign;
 
+import com.example.tmy.tmy.service.feign.impl.HelloServiceHiHystric;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -10,9 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @createTime 2021/7/15
  * @Desc
  */
-@FeignClient("service-hi")
+@FeignClient(value = "service-hi",fallback = HelloServiceHiHystric.class)
 public interface HelloFeignService {
 
-    @GetMapping("/hi")
+    @GetMapping("/provider/hi")
     String hiService(@RequestParam(value = "name") String name);
 }

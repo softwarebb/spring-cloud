@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
  * @createTime 2021/7/15
  * @Desc
  */
-@RestController("/provider")
+@RestController
 @Slf4j
 public class ServerController {
 
     @Value("${server.port}")
     private String port;
 
-    @GetMapping("/hi")
+    @GetMapping("/provider/hi")
     public String sayHi( String name) {
         return "I say " + name + ",you say hi，from port=" + port;
     }

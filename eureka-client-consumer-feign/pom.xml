@@ -7,27 +7,19 @@
         <artifactId>spring-cloud</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-
-    <artifactId>eureka-client-consumer</artifactId>
+    <artifactId>eureka-client-consumer-feign</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>eureka-client-consumer</name>
+    <name>eureka-client-consumer-feign</name>
     <description>Demo project for Spring Boot</description>
-
     <properties>
         <java.version>1.8</java.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-        <!--RestTemplate消费需要结合robbin-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.cloud</groupId>-->
-            <!--<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>-->
-        <!--</dependency>-->
-         <!--使用Feign,基于接口的注解，整合了robbin，默认负载均衡，整合了Hystrix，具有熔断能力-->
+        <!--使用Feign,基于接口的注解，整合了robbin，默认负载均衡，整合了Hystrix，具有熔断能力-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
