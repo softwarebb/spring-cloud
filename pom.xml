@@ -26,6 +26,7 @@
         <module>cloud-config-client</module>
         <module>cloud-zipkin-service-hi</module>
         <module>cloud-zipkin-service-miya</module>
+        <module>eureka-client-zuul</module>
     </modules>
 
     <description>Demo project for Spring Boot</description>

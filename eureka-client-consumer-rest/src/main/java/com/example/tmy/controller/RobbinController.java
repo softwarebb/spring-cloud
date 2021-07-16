@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @createTime 2021/7/15
  * @Desc
  */
-@RestController("/consumer")
+@RestController
 public class RobbinController {
 
     @Autowired
