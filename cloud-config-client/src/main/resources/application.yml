@@ -6,6 +6,9 @@ spring:
     config:
       label: main
       profile: dev
-      uri: http://localhost:8888/
 server:
   port: 8881
+eureka:
+  client:
+    service-url:
+      default-zoneUrl: http://localhost:8761/eureka/
