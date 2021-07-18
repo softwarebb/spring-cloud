@@ -1,4 +1,7 @@
 
+server:
+  port: 8881
+
 spring:
   application:
     name: config-client
@@ -6,9 +9,24 @@ spring:
     config:
       label: main
       profile: dev
-server:
-  port: 8881
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  rabbitmq:
+    addresses:
+    port:
+    username:
+    password:
+    virtual-host:
+
 eureka:
   client:
     service-url:
       default-zoneUrl: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
