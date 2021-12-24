@@ -14,11 +14,11 @@ spring:
       trace:
         enabled: true
   rabbitmq:
-    addresses:
-    port:
-    username:
-    password:
-    virtual-host:
+    addresses: mqpubtest1.sns.sohuno.com:5672,mqpubtest2.sns.sohuno.com:5672
+    port: 5672
+    username: sns
+    password: snstest
+    virtual-host: /sns_test
 
 eureka:
   client:
