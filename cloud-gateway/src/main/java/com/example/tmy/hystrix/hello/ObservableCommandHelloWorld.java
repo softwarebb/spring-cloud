@@ -1,15 +1,10 @@
 package com.example.tmy.hystrix.hello;
 
-import com.google.common.collect.Lists;
 import com.netflix.hystrix.HystrixCommandGroupKey;
 import com.netflix.hystrix.HystrixObservableCommand;
 import rx.Observable;
-import rx.Scheduler;
 import rx.Subscriber;
 import rx.schedulers.Schedulers;
-
-import java.util.HashMap;
-import java.util.List;
 
 /**
  * @description: desc

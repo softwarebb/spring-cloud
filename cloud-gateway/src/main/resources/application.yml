@@ -1,1 +1,9 @@
-
+spring:
+  application:
+    name: cloud-gateway
+#  cloud:
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#          lower-case-service-id: true
