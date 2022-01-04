@@ -20,5 +20,12 @@ public class CommandFallbackTest {
 //        assert res.equals("try fail and get fallback");
     }
 
+    @Test
+    public void testCommandFallbackWithCircleCutBreaker() {
+        for (int i = 0; i < 50; i++) {
+            new CommandFallbackWithCircleCutBreaker(i)
+        }
+    }
+
 
 }
