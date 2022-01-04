@@ -35,11 +35,11 @@ public class CommandFallback extends HystrixCommand<String> {
 //        throw  new Exception(name + " and do fail");
         // 不fallback的异常
 //        throw  new HystrixBadRequestException(name + " and do fail");
-        //超时
-        int count = 0;
-        while (count >= 0) {
-            count++;
-        }
+        //超时,阻塞的情况下,超时会调用fallback
+//        int count = 0;
+//        while (true) {
+//            count++;
+//        }
         return name;
     }
 
